@@ -1,3 +1,17 @@
+#' save a bunch of objects in a xlsx file 
+#' 
+#' This function saves the objects in '...' argument to the 'file' xlsx file
+#'  one object per sheet.
+#' @param file path of the xlsx file
+#' @param ... objects to be saved
+#' @return nothing
+#' @details 'file' path is passed verbatim to java so no bash style interpolation (eg '~')
+#'  is performed
+#' 
+#' @export
+#' @seealso \code{write.xlsx}
+#' @importFrom xlsx write.xlsx
+  
 save.xlsx <- function (file, ...)
 {
   require(xlsx, quietly = TRUE)
