@@ -7,5 +7,5 @@ Author: Andrea.Bisognin
 Maintainer: Andrea Bisognin <andrea.bisognin@gmail.com>
 Description: Functions for every day use (mainly to manipulate data)
 Depends: xlsx
-License: GPLv3
+License: GPL (>=3)
 
