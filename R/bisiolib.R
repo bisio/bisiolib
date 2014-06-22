@@ -27,3 +27,21 @@ save.xlsx <- function (file, ...)
   }
   print(paste("Workbook", file, "has", nobjects, "worksheets."))
 }
+
+#' Change factors columns to character 
+#' 
+#' This function changes factors columns in a \code{data.frame} to character.
+#' @param df the \code{data.frame} to manipulate.
+#' @return a \code{data.frame} with characters vectors instead of factors
+#' @export
+    
+defactorize <- function(df) {
+  l <- lapply(df,function(x) {
+    if (class(x) == "factor")
+      as.character(x)
+    else 
+      x
+  })
+  as.data.frame(l,stringsAsFactors=F)
+}
+
